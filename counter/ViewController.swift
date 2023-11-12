@@ -8,12 +8,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var counter = 0
+    @IBOutlet weak var label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        label.text = "Количество тыков: \(counter)"
     }
 
-
+    @IBAction func button(_ sender: Any) {
+        counter += 1
+        label.text = "Количество тыков: \(counter)"
+    }
 }
-
